@@ -52,7 +52,7 @@ def selectItem(dir):
 
     else:
         # sub-dir is empty to restart at the top level, increment error count by 1
-        print('directory has no sub-dirs or files... restarting from top')
+        print(f'{dir} has no sub-dirs or files... restarting from top')
         empty_dir_errors += 1
 
         # leave function if empty_dir_errors is too great
