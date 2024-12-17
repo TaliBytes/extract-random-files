@@ -28,6 +28,7 @@ empty_dir_errors = 0
 
 # select a dir or file item ()
 def selectItem(dir):
+    global empty_dir_errors
     # get possible items to either delve into (sub-dirs) or extact (copyable files)
     items = [item for item in os.listdir(dir) if item != 'EXTRACTED']
 
