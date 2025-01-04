@@ -1,3 +1,4 @@
+import datetime
 import os
 import random
 import shutil
@@ -32,7 +33,8 @@ def selectItem(dir):
     # get possible items to either delve into (sub-dirs) or extact (copyable files)
     items = [item for item in os.listdir(dir) if item != 'EXTRACTED']
 
-    if items:      
+    if items:
+        random.seed(int(datetime.datetime.now().strftime('%y%m%d%H%M%S%f')))      
         rand_item = f'{dir}/{random.choice(items)}'
         
         # delve deeper if chosen item is a sub-dir
